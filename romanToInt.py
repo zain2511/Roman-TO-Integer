@@ -3,6 +3,7 @@ def romanToInt(s):
         :type s: str
         :rtype: int
         """
+   
         roman_dict = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
         len_roman = len(s)
         final_sum = 0
@@ -11,7 +12,7 @@ def romanToInt(s):
             if s[i] not in roman_dict:
                 return "Please use only roman charcters"
             else:
-                
+                # Condition for all the possible combinations
                 if s[i] == 'I':
                     if i+1 != len_roman and (s[i+1] == 'V' or s[i+1] == 'X'):
                         final_sum = final_sum - roman_dict[s[i]]
